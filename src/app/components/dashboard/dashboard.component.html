@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <h1>Inside to be dashboard</h1>
+      <p>
+        dashboard works!
+      </p>
+    </div>
+    <div class="col-8">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+        </label>
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+        </label>
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+        </label>
+      </div>
+      <hr>
+      <pre>{{model | json}}</pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+  </div>
+  <div class="row">
+    <div class="col-8">col-8</div>
+    <div class="col-4">col-4</div>
+  </div>
+</div>
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr>
+
+<pre>{{closeResult}}</pre>
