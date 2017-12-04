@@ -1,12 +1,19 @@
 <div class="container-fluid">
+  <div class="row" style="padding-top: 100px">
+    <div class="col-12">
+      <h2>Barcode Results</h2>
+      <div>type:{{barcodeResponse.txtDecoderType}}</div>
+      <div>content:{{barcodeResponse.txtDecoderContent}}</div>
+    </div>
+  </div>
   <div class="row">
-    <div class="col-4">
-      <h1>Inside to be dashboard</h1>
+    <div class="col-12"  style="padding-top: 100px">
+      <h2>barcode decoded</h2>
       <p>
-        dashboard works!
+        dashboard main view
       </p>
     </div>
-    <div class="col-8">
+    <div class="col-12"  style="padding-top: 100px">
       <div class="btn-group" data-toggle="buttons">
         <label class="btn-primary" ngbButtonLabel>
           <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
@@ -21,17 +28,6 @@
       <hr>
       <pre>{{model | json}}</pre>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-  </div>
-  <div class="row">
-    <div class="col-8">col-8</div>
-    <div class="col-4">col-4</div>
   </div>
 </div>
 
